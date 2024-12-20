@@ -1,4 +1,4 @@
-# proyecto15
+# proyectofinalindividual
 Para reconstruir dependencias
     npm install
 

@@ -9,9 +9,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        // Permite peticiones desde localhost:1234 (puerto del frontend Parcel)
         registry.addMapping("/**")
-                .allowedOrigins("http://localhost:1234")  // Permite CORS desde este origen
+                .allowedOrigins("http://localhost:1234")
                 .allowedMethods("GET", "POST", "PUT", "DELETE")
                 .allowedHeaders("*")
                 .allowCredentials(true);

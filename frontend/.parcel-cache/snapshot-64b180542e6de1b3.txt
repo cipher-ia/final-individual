@@ -1,0 +1,16 @@
+15
+68/home/curso02/Desktop/proyecto-final/proyectoindividual/frontend/src1734681950816050953 1
+79/home/curso02/Desktop/proyecto-final/proyectoindividual/frontend/src/index.html1734681950816050953 0
+79/home/curso02/Desktop/proyecto-final/proyectoindividual/frontend/src/javascript1734681950816050953 1
+94/home/curso02/Desktop/proyecto-final/proyectoindividual/frontend/dist/frontend.59712999.js.map1734682434466963109 0
+82/home/curso02/Desktop/proyecto-final/proyectoindividual/frontend/package-lock.json1734681950815051453 0
+87/home/curso02/Desktop/proyecto-final/proyectoindividual/frontend/dist/index.005eec76.js1734682434463963932 0
+88/home/curso02/Desktop/proyecto-final/proyectoindividual/frontend/src/javascript/index.js1734682223083240988 0
+87/home/curso02/Desktop/proyecto-final/proyectoindividual/frontend/dist/index.4a334839.js1734681950814051952 0
+77/home/curso02/Desktop/proyecto-final/proyectoindividual/frontend/package.json1734681950815051453 0
+90/home/curso02/Desktop/proyecto-final/proyectoindividual/frontend/dist/frontend.59712999.js1734682434458965303 0
+80/home/curso02/Desktop/proyecto-final/proyectoindividual/frontend/dist/index.html1734682434450967498 0
+69/home/curso02/Desktop/proyecto-final/proyectoindividual/frontend/dist1734682434467962835 1
+64/home/curso02/Desktop/proyecto-final/proyectoindividual/frontend1734681950816050953 1
+91/home/curso02/Desktop/proyecto-final/proyectoindividual/frontend/dist/index.4a334839.js.map1734681950815051453 0
+91/home/curso02/Desktop/proyecto-final/proyectoindividual/frontend/dist/index.005eec76.js.map1734682434466963109 0

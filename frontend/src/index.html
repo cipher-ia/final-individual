@@ -20,7 +20,30 @@
             <select id="productoSeleccionado" class="form-select">
                 <option value="" selected disabled>Seleccione un producto</option>
             </select>
+
+            
         </div>
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <button id="eliminarProd" class="btn btn-danger w-100">Eliminar Producto Seleccionado</button>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <input type="text" id="nombreNuevoProducto" class="form-control" placeholder="Nombre del producto">
+            </div>
+            <div class="col-md-3">
+                <input type="number" id="cantidadNuevoProducto" class="form-control" placeholder="Cantidad" min="1">
+            </div>
+            <div class="col-md-3">
+                <input type="number" id="precioNuevoProducto" class="form-control" placeholder="Precio" step="0.01" min="0">
+            </div>
+            <div class="col-md-3 d-flex align-items-end">
+                <button id="añadirProducto" class="btn btn-primary w-100">Añadir Producto</button>
+            </div>
+        </div>
+
         <div class="col-md-3">
             <label for="cantidadProducto" class="form-label">Cantidad</label>
             <input type="number" id="cantidadProducto" class="form-control" min="1" value="1">

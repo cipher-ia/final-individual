@@ -26,8 +26,8 @@ public class ProductoController {
     private Map<Long, Producto> productos = new HashMap<>();
 
     public ProductoController() {
-        productos.put(1l, new Producto(1, "Producto A", "Descripción A", 100.0f, 10));
-        productos.put(2l, new Producto(2, "Producto B", "Descripción B", 150.0f, 0));
+        productos.put(1l, new Producto(1, "Tarro de miel", "Tarro de miel de potes", 5.25f, 10));
+        productos.put(2l, new Producto(2, "Sobaos el Macho", "Sobaos pasiegos de gran calidad", 1.9f, 200));
     }
 
 

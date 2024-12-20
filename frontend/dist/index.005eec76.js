@@ -9,6 +9,7 @@ function cargarProductos() {
         method: "GET",
         success: function(productos) {
             $("#productoSeleccionado").empty();
+            $("#productoSeleccionado").append('<option value="" selected disabled>Seleccione un producto</option>');
             productos.forEach((p)=>{
                 $("#productoSeleccionado").append(`<option value="${p.id}" data-nombre="${p.nombre}" data-precio="${p.precio}" data-stock="${p.cantidad}">
                         ${p.nombre} - \u{20AC}${p.precio} (Stock: ${p.cantidad})
@@ -16,7 +17,7 @@ function cargarProductos() {
             });
         },
         error: function() {
-            mostrarMensaje("Error al cargar productos.", "danger");
+            mostrarMensaje("Error al recargar productos.", "danger");
         }
     });
 }
@@ -67,12 +68,18 @@ $(document).on("click", "#realizarCompra", function() {
     }
     let exitos = [];
     let fallos = [];
+    let totalCompra = 0;
     (async function procesarCompras() {
         for (let producto of carrito)try {
             await $.ajax({
                 url: `${baseUrl}/${producto.id}/compra`,
-                method: "POST"
+                method: "POST",
+                data: {
+                    cantidad: producto.cantidad
+                }
             });
+            let precioProducto = parseFloat($("#productoSeleccionado option[value='" + producto.id + "']").data("precio"));
+            totalCompra += precioProducto * producto.cantidad;
             exitos.push(producto.nombre);
         } catch (error) {
             fallos.push(producto.nombre);
@@ -80,7 +87,8 @@ $(document).on("click", "#realizarCompra", function() {
         mostrarMensaje(`
             <strong>Compra realizada:</strong><br>
             Exitosos: ${exitos.join(", ") || "Ninguno"}<br>
-            Fallidos: ${fallos.join(", ") || "Ninguno"}
+            Fallidos: ${fallos.join(", ") || "Ninguno"}<br>
+            <strong>Total: \u{20AC}${totalCompra.toFixed(2)}</strong>
         `, "info");
         carrito = [];
         actualizarCarrito();
@@ -89,7 +97,8 @@ $(document).on("click", "#realizarCompra", function() {
 $("#recargar").on("click", function() {
     $("#recargar ul").empty();
     $("#productoSeleccionado option").each(function() {
-        if ($(this).val()) $("#recargar ul").append(`<li>${$(this).text()}</li>`);
+        cargarProductos();
+        mostrarMensaje("Productos recargados correctamente.", "success");
     });
 });
 cargarProductos();
